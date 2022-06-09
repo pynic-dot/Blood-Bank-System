@@ -1,0 +1,195 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Header_h{
+    background-color: white;
+    padding: 0.5ch;
+}
+
+h1{
+    color: rgb(214, 2, 2);
+    text-align: justify;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 3px rgb(184, 62, 62);
+}
+
+#header_img{
+    height: 100px;
+    width: 200px;
+    float: left;
+}
+/* Add a black background color to the top navigation */
+#topnav {
+    background-color: rgb(214, 2, 2);
+    overflow: hidden;
+ 
+}
+  
+  /* Style the links inside the navigation bar */
+#topnav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  /* Add a color to the active/current link */
+.btn:hover {
+    color: black;
+    background-color: whitesmoke;
+  }
+
+.table-bordered{
+  margin: 40px 40px 0px 150px;
+}
+
+  table, td ,th {
+      border: 0.3px solid rgb(173, 173, 173);
+      text-align: center;
+      height: 50px;
+      
+  }
+
+  table {
+    
+    width: 90%;
+    border-collapse: collapse;
+  }
+
+
+.footer{
+  margin-top: 400px;
+  padding: 40px 0;
+  background-color: gainsboro;
+
+ }
+
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+
+
+
+}
+
+.footer ul li a{
+  padding: 12px;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+  
+
+}
+
+.footer ul li{
+
+  display: inline-block;
+  padding: 0 15 px;
+
+}
+
+.footer ul li a:hover{
+  opacity: 1;
+}
+
+.footer .copyright{
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+
+}
+
+.leftBox{
+  height:100px;
+  background-color: rgb(240, 63, 63);
+  width:50%;
+  float:left;
+  height:200px;
+  text-align: center;
+
+}
+.rightBox{
+  background-color: rgb(158, 8, 8);
+  width:50%;
+  color:yellow;
+  float:right;
+  height:200px;
+  text-align: center;
+}
+
+.rightBox a{
+  text-align:center;
+  padding:40px;
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+}
+
+
+.leftBox a{
+  text-align:center;
+  padding:40px;
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+}
+
+/* order Details page Design */
+
+.order_container{
+  margin: 80px;
+  background-color: darkcyan;
+  border-radius: 10px;
+  padding: 5px;
+  
+}
+.lable_style{
+  margin: 12px;
+  padding: 15px;
+  display: inline-table;
+  text-align: justify;
+  width: 40%;
+}
+h1{
+  text-align: center;
+}
+.lables{
+  padding-left: 260px;
+  margin-bottom: 150px;
+  
+}
+.orlb1{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+/* design contact and about page */
+
+#ac{
+  margin: 20px;
+  background-color: darkcyan;
+  border-radius: 8px;
+}
+
+.ac1{
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}

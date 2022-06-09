@@ -1,0 +1,30 @@
+.mySlides {display: none;}
+img {vertical-align: middle;
+    width: 575px;
+    height: 300px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100px;
+  position: relative;
+  margin: 0% 50% 5% 0% ;
+  float: left;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+

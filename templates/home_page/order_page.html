@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends "home_page/home.html" %}
+{% load static %}
+
+{% block home_block %}
+
+
+    <div class="reg_container">
+        <form action="" method="post">
+            {% csrf_token  %}
+            <h2>Order Blood Here</h2>
+            {{order_blood}}
+            <input type="submit" value="Submit">
+        </form>
+    </div>    
+
+{% endblock %}

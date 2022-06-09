@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "home_page/home.html" %}
+{% load static %}
+
+{% block home_block %}
+
+<div class="reg_container">
+    {% if registered %}
+    <h1>You have registered!</h1>
+    {% else %}
+    <form action="" method="post">
+        {% csrf_token  %} 
+        <h2>Register Here</h2> 
+        {{form_user}}
+        {{forms_home}}
+        
+          <input type="submit" value="Register">
+    </form>
+    {% endif %}
+</div>
+
+{% endblock %}

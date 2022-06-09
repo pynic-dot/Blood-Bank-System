@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends "home_page/home.html" %}
+{% load static %}
+
+{% block home_block %}
+
+<!-- line 1 -->
+<div class="leftBox">
+    {% if user.is_authenticated %}
+    <a href="{% url 'blood_order' %}" ><p class="orderid"> Order Blood</p></a>
+    {% endif %}
+</div>
+<div class="rightBox">
+    {% if user.is_authenticated %}
+    <a href="{% url 'order_details_page' %}" ><p class="orderid">Order Details</p></a>
+    {% endif %}
+</div>
+
+
+{% endblock %}

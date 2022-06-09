@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "home_page/home.html" %}
+{% load static %}
+
+{% block home_block %}
+
+
+    <h1>Order Details</h1>
+    
+        {% for x in order_data %}
+
+    <div class="order_container">
+    <div class="lables">
+    <div class="lable_style"><span class="orlb1">Name :&emsp;&emsp;</span>{{ x.receiver_name }}</div>
+    <div class="lable_style"><span class="orlb1">Contact No. :&emsp;&emsp; </span>{{x.receiver_contact_no}}</div>
+    <div class="lable_style"><span class="orlb1">Hospital :&emsp;&emsp;</span>{{x.hospital_name}}</div>
+    <div class="lable_style"><span class="orlb1">Blood Group :&emsp;&emsp;</span>{{x.blood_grp}}</div>
+    <div class="lable_style"><span class="orlb1">Email ID :&emsp;&emsp; </span>{{x.email_id}}</div>
+    <div class="lable_style"><span class="orlb1">Blood Unit : &emsp;&emsp;</span>{{x.unit_qty}}</div>
+    <div class="lable_style"><span class="orlb1">Date : &emsp;&emsp;</span>{{x.current_date}}</div>
+    </div>
+    </div>
+    {% endfor %}
+
+{% endblock %}

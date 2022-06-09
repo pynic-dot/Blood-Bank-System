@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank!</title>
+    <link rel="stylesheet" href="{% static 'home_page/slideshow.css' %}">
+    <link rel="stylesheet" href="{% static 'home_page/home_page.css' %}">
+    <link rel="stylesheet" href="{% static 'home_page/reg_style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+
+  <body>
+    <div>
+    <div class="commonTem">
+      <div class="Header_h">
+        <span><img id="header_img" src="{% static 'home_p_image/blood_image-removebg-preview.png' %}" alt="">
+          <h1>Blood Bank Management System!</h1>
+        </span>
+      </div>
+
+      <div id="topnav">
+        {% if user.is_authenticated %}
+        <a class="btn" href="{% url 'after_login' %}">Home</a>
+        {% else %}
+        <a class="btn" href="{% url 'home_page:home_page' %}">Home</a>
+        {% endif %}
+        <a class="btn" href="{% url 'home_page:about' %}">About</a>
+        <a class="btn" href="{% url 'home_page:registration' %}">Registration</a>
+        <a class="btn" href="{% url 'home_page:compatibility' %}">Compatibility</a>
+        <a class="btn" href="{% url 'home_page:B_available' %}">Availbility</a>
+        <a class="btn" href="{% url 'home_page:donate' %}">Donate</a>
+        <a class="btn" href="{% url 'admin:index' %}">Admin</a>
+        <a class="btn" href="{% url 'home_page:contact' %}">Contact</a>
+
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+        <a href="#"></a>
+        {% endif %}
+
+      </div>
+    </div>
+    <div>
+      {% block home_block %}
+      <div>
+
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <img src="{% static 'home_p_image/image1.jpg' %}">
+
+          </div>
+
+          <div class="mySlides fade">
+            <img src="{% static 'home_p_image/image2.jpg' %}">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="{% static 'home_p_image/image3.jpg' %}">
+          </div>
+
+
+
+        </div>
+
+        <div class="Login_area">
+          <form action="{% url 'home_page:user_login' %}" method="post">
+            {% csrf_token %}
+            <label for="username" class="lb1">User Id</label>
+            <input type="text" id="usrid" name="username">
+            <label for="password" class="lb1">Password</label>
+            <input type="password" name="password" id="pswd">
+            <input type="submit" value="Login" id="loginSub">
+          </form>
+        </div>
+        <script src="{% static 'home_page/home_page.js' %}"></script>
+        
+      </div>
+      {% endblock %}
+</div>
+      <!-- footer site -->
+    </div>
+    <div>
+    <section class="footer">
+      <ul class="list">
+        <li><a href="{% url 'home_page:home_page' %}">Home</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+
+      </ul>
+      <p class="copyright">
+        Amit 192010407 @ 2022
+      </p>
+    </section>
+  </div>
+  <script type="text/javascript" src="{% static 'home_page/navbar.js' %}"></script>
+  </body>
+
+</html>
